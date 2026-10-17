@@ -52,13 +52,13 @@ O sistema foi modularizado separando as regras de negócio (Backend) da interfac
 *(Insira as capturas de tela do projeto em Dark Mode ou padrão nas pastas correspondentes)*
 
 ### Dashboard - Aba Titular
-![Aba Titular](./images/titular.png)
+![Aba Titular](./images/TITULAR.png)
 
 ### Motor de Consolidação - Aba Informes
-![Aba Informes](./images/informes.png)
+![Aba Informes](./images/INFORMES.png)
 
 ### Lançamentos Estruturados - Aba Notas
-![Aba Notas](./images/notas.png)
+![Aba Notas](./images/NOTAS.png)
 
 ---
 
