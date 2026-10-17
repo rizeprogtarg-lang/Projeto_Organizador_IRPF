@@ -55,10 +55,10 @@ O sistema foi modularizado separando as regras de negócio (Backend) da interfac
 ![Aba Titular](TITULAR.png)
 
 ### Motor de Consolidação - Aba Informes
-![Aba Informes](./images/INFORMES.png)
+![Aba Informes](INFORMES.png)
 
 ### Lançamentos Estruturados - Aba Notas
-![Aba Notas](TITULAR.png)
+![Aba Notas](INFORMES.png)
 
 ---
 
