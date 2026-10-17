@@ -1,68 +1,76 @@
-Organizador de Informações para o Imposto de Renda (IRPF)
-Projeto desenvolvido como parte do desafio prático da DIO, com o objetivo de criar uma ferramenta no Microsoft Excel para centralizar e organizar informações que podem ser necessárias durante a preparação da declaração do Imposto de Renda.
-A planilha reúne campos de cadastro do titular, informes bancários e registro de entradas, utilizando recursos do Excel para facilitar o preenchimento e a conferência dos dados.
-Importante: este projeto é uma ferramenta de organização. Ele não substitui o programa oficial da Receita Federal, não calcula necessariamente todos os valores exigidos na declaração e não garante que as informações estejam completas ou corretas para fins fiscais.
+# 📊 Organizador Inteligente - Imposto de Renda (IRPF)
 
-Objetivos do projeto
-- Praticar os recursos do Microsoft Excel em uma situação do dia a dia.
-- Centralizar informações relevantes em uma única pasta de trabalho.
-- Facilitar o preenchimento por meio de listas suspensas e validações.
-- Aplicar fórmulas para automatizar cálculos simples.
-- Documentar o processo e compartilhar o projeto usando o GitHub.
-Estrutura da planilha
-A pasta de trabalho está organizada em abas:
-Aba	Finalidade
-TITULAR	Reunir informações cadastrais do titular e campos de resposta.
-INFORMES	Registrar informações de instituições financeiras e valores de informes bancários, com totalização automática.
-NOTAS	Organizar lançamentos com data, categoria e valor.
-Aba auxiliar	Apoiar listas utilizadas nas validações da planilha.
+![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+![VBA](https://img.shields.io/badge/VBA-Motor_de_Automação-blue?style=for-the-badge)
+![DIO](https://img.shields.io/badge/Challenge-DIO-purple?style=for-the-badge)
 
+Projeto desenvolvido como parte do desafio prático da **DIO (Digital Innovation One)**. O objetivo é aplicar conceitos de engenharia de dados e usabilidade (UX) dentro do Microsoft Excel, criando uma ferramenta centralizada e à prova de erros para a organização prévia da declaração do Imposto de Renda.
 
-Os nomes e a disposição das abas refletem a estrutura do arquivo Excel entregue neste repositório.
-Recursos utilizados
-- Microsoft Excel.
-- Fórmulas para totalização de valores.
-- Validação de dados e listas suspensas.
-- Formatação de células para melhorar a leitura.
-- Organização das informações em abas.
-- GitHub e Markdown para documentação do projeto.
-Como utilizar
-1. Baixe o arquivo .xlsm disponível neste repositório.
-2. Abra-o no Microsoft Excel para desktop.
-3. Se o Excel exibir um aviso de segurança, habilite macros somente se você confiar na origem do arquivo e tiver verificado o conteúdo. A utilização básica da planilha pode não exigir macros.
-4. Preencha os campos da aba TITULAR.
-5. Registre os valores e as instituições financeiras na aba INFORMES.
-6. Utilize a aba NOTAS para registrar data, categoria e valor.
-7. Confira os totais e revise os dados antes de utilizá-los em qualquer processo de declaração.
-Boas práticas
-- Faça uma cópia de segurança antes de editar a planilha.
-- Utilize dados fictícios em demonstrações e capturas de tela.
-- Não publique CPF, endereço, dados bancários, informes de rendimentos ou documentos fiscais no repositório.
-- Confira se as fórmulas e validações continuam funcionando após alterações na estrutura.
-Capturas de tela
-As imagens de demonstração podem ser armazenadas na pasta images/. Para exibi-las aqui no README, adicione os arquivos de imagem ao repositório e descomente/adapte os exemplos abaixo:
-![Aba Titular](images/titular.png)
-![Aba Informes](images/informes.png)
-![Aba Notas](images/notas.png)
-Aprendizados
-Durante o desenvolvimento e a revisão do projeto, foram trabalhados conceitos como:
-- Organização de dados em planilhas.
-- Aplicação de fórmulas e validações no Excel.
-- Criação de uma interface mais clara para entrada de informações.
-- Identificação da importância de testar fórmulas, menus e elementos de navegação.
-- Documentação técnica com Markdown.
-- Versionamento e compartilhamento de arquivos por meio do GitHub.
-Limitações e melhorias futuras
-Este projeto é uma versão inicial e pode evoluir com novas funcionalidades, como:
-- Melhorias na navegação entre abas.
-- Mais validações para evitar preenchimentos inconsistentes.
-- Campos adicionais conforme a necessidade do usuário.
-- Testes documentados de fórmulas, menus e macros.
-- Capturas de tela e exemplos com dados fictícios.
-Tecnologias e ferramentas
-- Microsoft Excel — criação da ferramenta e organização dos dados.
-- VBA — suporte a automações existentes no arquivo, quando aplicável.
-- GitHub — hospedagem e compartilhamento do projeto.
-- Markdown — documentação.
-Créditos
-Projeto desenvolvido para fins educacionais como parte de um desafio da Digital Innovation One (DIO).
+> ⚠️ **Aviso Importante:** Este projeto é estritamente uma ferramenta de organização pessoal. Ele **não substitui** o programa oficial da Receita Federal (RFB), não calcula alíquotas fiscais finais e não garante conformidade tributária. Revise sempre seus dados antes de qualquer submissão oficial.
+
+---
+
+## 🎯 Objetivos da Solução
+
+- Desenvolver uma interface clara e organizada para entrada de dados financeiros.
+- Garantir a **Integridade dos Dados** através de listas suspensas (Data Validation) referenciadas em abas ocultas.
+- Automatizar consolidações e cálculos de totalização, minimizando falhas humanas.
+- Documentar e versionar o projeto utilizando boas práticas de desenvolvimento no GitHub.
+
+## 🏗️ Arquitetura do Projeto (Estrutura de Abas)
+
+O sistema foi modularizado separando as regras de negócio (Backend) da interface do usuário (Frontend).
+
+| 🗂️ Aba | 🎯 Finalidade |
+| :--- | :--- |
+| **TITULAR** | Interface principal para informações cadastrais do titular e parâmetros base. |
+| **INFORMES** | Módulo de registro de instituições financeiras e valores, com motor de totalização automática. |
+| **NOTAS** | Log estruturado de lançamentos diários, segmentado por Data, Categoria e Valor. |
+| **⚙️ Auxiliar** | Atua como o "Backend" do sistema. Armazena as listas matrizes utilizadas nas validações de dados para evitar inconsistências (Hardcoding). |
+
+---
+
+## 🚀 Como Utilizar (Setup)
+
+1. Faça o download do arquivo `.xlsm` disponível nas *Releases* ou na raiz deste repositório.
+2. Abra o arquivo no **Microsoft Excel** (versão Desktop recomendada).
+3. **Aviso de Segurança:** Como o arquivo possui arquitetura de automação (VBA), o Excel exibirá uma tarja amarela. Clique em **"Habilitar Conteúdo"** (Habilitar Macros) para garantir que todas as validações de script funcionem corretamente.
+4. Preencha sequencialmente os dados partindo da aba `TITULAR`, movendo-se para `INFORMES` e, por fim, registrando as movimentações na aba `NOTAS`.
+
+---
+
+## 🔒 Boas Práticas e Segurança de Dados
+
+- **Privacidade Zero-Trust:** Nunca comite (faça upload) no GitHub versões desta planilha contendo seu CPF, RG, endereços reais ou chaves PIX.
+- **Ambiente de Testes:** Para demonstrações de portfólio (como as imagens abaixo), utilize exclusivamente **dados fictícios** (Mock data).
+- Faça backups regulares (versionamento local) antes de alterar a estrutura de abas, para não quebrar referências do VBA ou das fórmulas estruturadas.
+
+---
+
+## 📸 Interface e Navegação
+
+*(Insira as capturas de tela do projeto em Dark Mode ou padrão nas pastas correspondentes)*
+
+### Dashboard - Aba Titular
+![Aba Titular](./images/titular.png)
+
+### Motor de Consolidação - Aba Informes
+![Aba Informes](./images/informes.png)
+
+### Lançamentos Estruturados - Aba Notas
+![Aba Notas](./images/notas.png)
+
+---
+
+## 🛠️ Tecnologias e Recursos Empregados
+
+- **Microsoft Excel:** Fórmulas dinâmicas, Formatação Condicional e Validação de Dados Avançada (Data Validation).
+- **VBA (Visual Basic for Applications):** Suporte a automações de transição de tela e higienização de dados no arquivo `.xlsm`.
+- **Git / GitHub:** Versionamento de código e hospedagem.
+- **Markdown:** Documentação técnica estruturada.
+
+---
+
+## 👨‍💻 Autor
+
+**Anthony / Fundador | Rize Nexus / Landing Pages / Apps / Automation Specialist**
