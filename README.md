@@ -58,7 +58,7 @@ O sistema foi modularizado separando as regras de negócio (Backend) da interfac
 ![Aba Informes](./images/INFORMES.png)
 
 ### Lançamentos Estruturados - Aba Notas
-![Aba Notas](./images/NOTAS.png)
+![Aba Notas](TITULAR.png)
 
 ---
 
